@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
     
     
       
@@ -889,7 +889,7 @@
 
 <h1 id="file-based-catalog-onboarding">File Based Catalog onboarding</h1>
 <blockquote>
-<p><strong>Note</strong>: The FBC support is going to be released at the end of Q2 2024. Until that and until official announcement the steps below are not yet supported.</p>
+<p><strong>Note</strong>: The File Based Catalog support is now in an alpha phase. We welcome any feedback you have for this new feature.</p>
 </blockquote>
 <p>Operators in certified, marketplace, or community repositories are defined in a declarative way.
 This means a user provides all necessary information in advance about the operator bundle and how it
@@ -911,6 +911,11 @@ wget https://raw.githubusercontent.com/redhat-openshift-ecosystem/operator-pipel
 </code></pre>
 <p>Now we can convert existing operator into FBC. The initial run takes a while because
 a local cache is generated during a run.</p>
+<blockquote>
+<p><strong>Note</strong>
+A user executing the conversion script needs to be authenticated to registries used by OLM catalog.
+Use <code>podman login</code> to log in into all registries.</p>
+</blockquote>
 <p>To convert existing operator to <code>FBC</code> format you need to execute following command:</p>
 <pre><code class="language-bash">$ make fbc-onboarding
 
@@ -919,13 +924,19 @@ a local cache is generated during a run.</p>
 2024-04-24 15:53:07,633 [operator-cert] DEBUG Building cache for registry.stage.redhat.io/redhat/community-operator-index:v4.12
 ...
 </code></pre>
-<p>The Makefile will execute the following steps:
- - Download dependencies needed for the migration (opm, fbc-onboarding CLI)
- - Fetch a list of currently supported OCP catalogs
- - Transform existing catalogs into a basic template
- - Generate a composite template for an operator
- - Generate an FBC catalog for a given operator
- - Update operator ci.yaml config</p>
+<blockquote>
+<p>[!IMPORTANT]
+In case an operator isn't shipped to all OCP catalog versions manually update <code>OCP_VERSIONS</code>
+variable in the <code>Makefile</code> and include only versions supported by an operator.</p>
+</blockquote>
+<p>The Makefile will execute following steps:</p>
+<ul>
+<li>Download dependencies needed for the migration (opm, fbc-onboarding CLI)</li>
+<li>Fetch a list of currently supported OCP catalogs (this might take a while when doing it for the first time)</li>
+<li>Transform existing catalogs into a basic template</li>
+<li>Generate an FBC catalog for a given operator</li>
+<li>Update operator ci.yaml config</li>
+</ul>
 <p>After a script is finished you should see a template and generated fbc in the repository.</p>
 <pre><code class="language-bash">$ tree operators/aqua
 
@@ -962,7 +973,7 @@ catalogs
 </code></pre>
 <h2 id="submit-fbc-changes">Submit FBC changes</h2>
 <p>Artifacts generated in the previous step need to be added to a git and submitted via pull request. The operator pipeline validates the content of the catalogs and releases changes into ocp catalogs.</p>
-<pre><code class="language-bash">$ git add operators/aqua/{catalog-templates,ci.yaml}
+<pre><code class="language-bash">$ git add operators/aqua/{catalog-templates,ci.yaml,Makefile}
 
 $ git add catalogs/{v4.12,v4.13,v4.14,v4.15,v4.16}/aqua
 
@@ -1023,7 +1034,7 @@ More information about catalog templates can be found <a href="https://olm.opera
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.af256bd8.min.js"></script>
       
     
   </body>

@@ -16,7 +16,7 @@
     
     
       
-        <title>Index Signature Verification - Red Hat OpenShift Operators</title>
+        <title>Preflight invalidation CronJob - Red Hat OpenShift Operators</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#index-signature-verification" class="md-skip">
+        <a href="#preflight-invalidation-cronjob" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index Signature Verification
+              Preflight invalidation CronJob
             
           </span>
         </div>
@@ -811,20 +811,17 @@
   
 
 
-<h1 id="index-signature-verification">Index Signature Verification</h1>
-<p>This repository contains a special Tekton pipeline for checking the signature
-status of the production index images. For now, it is only intended to be deployed
-manually on a single cluster. The pipeline is regularly scheduled via a CronJob
-and runs to completion without sending a direct notification upon success or
-failure. Instead, it relies on other resources to handle reporting.</p>
-<p>The pipeline should be deployed using Ansible.</p>
+<h1 id="preflight-invalidation-cronjob">Preflight invalidation CronJob</h1>
+<p>The repository contains a CronJob that updates enabled preflight versions
+weekly. https://issues.redhat.com/browse/ISV-4964</p>
+<p>After changes, the CronJob can be deployed using Ansible.</p>
 <pre><code class="language-bash">ansible-playbook \
-    -i inventory/clusters \
-    -e &quot;clusters={INSERT ANSIBLE HOST LIST}&quot; \
-    -e &quot;ocp_token={INSERT TOKEN}&quot; \
-    -e &quot;k8s_validate_certs={yes|no}&quot; \
-    --vault-password-file &quot;{INSERT FILE}&quot; \
-    playbooks/deploy-index-signature-verification.yml
+    -i ansible/inventory/clusters \
+    -e &quot;clusters=prod-cluster&quot; \
+    -e &quot;ocp_token=[TOKEN]&quot; \
+    -e &quot;env=prod&quot; \
+    --vault-password-file [PWD_FILE] \
+    playbooks/preflight-invalidation.yml
 </code></pre>
 
 
