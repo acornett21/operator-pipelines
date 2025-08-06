@@ -11,16 +11,16 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>Red Hat OpenShift Operators</title>
+        <title>Webhook Dispatcher - Red Hat OpenShift Operators</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
       
 
@@ -39,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +57,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#webhook-dispatcher" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -67,7 +72,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Red Hat OpenShift Operators" class="md-header__button md-logo" aria-label="Red Hat OpenShift Operators" data-md-component="logo">
+    <a href=".." title="Red Hat OpenShift Operators" class="md-header__button md-logo" aria-label="Red Hat OpenShift Operators" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -87,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Webhook Dispatcher
             
           </span>
         </div>
@@ -172,7 +177,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -193,7 +198,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/users/pipelines_overview/" class="md-tabs__link">
+        <a href="../users/pipelines_overview/" class="md-tabs__link">
           
   
   
@@ -213,7 +218,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/users/static_checks/" class="md-tabs__link">
+        <a href="../users/static_checks/" class="md-tabs__link">
           
   
   
@@ -233,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/users/contributing-prerequisites/" class="md-tabs__link">
+        <a href="../users/contributing-prerequisites/" class="md-tabs__link">
           
   
   
@@ -253,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/pipeline-admin-guide/" class="md-tabs__link">
+        <a href="../pipeline-admin-guide/" class="md-tabs__link">
           
   
   
@@ -289,7 +294,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Red Hat OpenShift Operators" class="md-nav__button md-logo" aria-label="Red Hat OpenShift Operators" data-md-component="logo">
+    <a href=".." title="Red Hat OpenShift Operators" class="md-nav__button md-logo" aria-label="Red Hat OpenShift Operators" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -319,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -386,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/pipelines_overview/" class="md-nav__link">
+      <a href="../users/pipelines_overview/" class="md-nav__link">
         
   
   
@@ -409,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/isv_pipelines/" class="md-nav__link">
+      <a href="../users/isv_pipelines/" class="md-nav__link">
         
   
   
@@ -432,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/contributing-via-pr/" class="md-nav__link">
+      <a href="../users/contributing-via-pr/" class="md-nav__link">
         
   
   
@@ -455,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/operator-ci-yaml/" class="md-nav__link">
+      <a href="../users/operator-ci-yaml/" class="md-nav__link">
         
   
   
@@ -478,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/community-operators-troubleshooting/" class="md-nav__link">
+      <a href="../users/community-operators-troubleshooting/" class="md-nav__link">
         
   
   
@@ -553,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/static_checks/" class="md-nav__link">
+      <a href="../users/static_checks/" class="md-nav__link">
         
   
   
@@ -576,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/dynamic_checks/" class="md-nav__link">
+      <a href="../users/dynamic_checks/" class="md-nav__link">
         
   
   
@@ -651,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/contributing-prerequisites/" class="md-nav__link">
+      <a href="../users/contributing-prerequisites/" class="md-nav__link">
         
   
   
@@ -674,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/contributing-where-to/" class="md-nav__link">
+      <a href="../users/contributing-where-to/" class="md-nav__link">
         
   
   
@@ -697,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/best-practices/" class="md-nav__link">
+      <a href="../users/best-practices/" class="md-nav__link">
         
   
   
@@ -720,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/fbc_onboarding/" class="md-nav__link">
+      <a href="../users/fbc_onboarding/" class="md-nav__link">
         
   
   
@@ -743,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/fbc_workflow/" class="md-nav__link">
+      <a href="../users/fbc_workflow/" class="md-nav__link">
         
   
   
@@ -766,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/fbc_autorelease/" class="md-nav__link">
+      <a href="../users/fbc_autorelease/" class="md-nav__link">
         
   
   
@@ -789,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/users/packaging-required-criteria-ocp/" class="md-nav__link">
+      <a href="../users/packaging-required-criteria-ocp/" class="md-nav__link">
         
   
   
@@ -864,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pipeline-admin-guide/" class="md-nav__link">
+      <a href="../pipeline-admin-guide/" class="md-nav__link">
         
   
   
@@ -887,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/catalog_image_browser/" class="md-nav__link">
+      <a href="../catalog_image_browser/" class="md-nav__link">
         
   
   
@@ -910,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/fbc-catalog-promotion/" class="md-nav__link">
+      <a href="../fbc-catalog-promotion/" class="md-nav__link">
         
   
   
@@ -945,8 +950,171 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="webhook-dispatcher">Webhook Dispatcher</h1>
+<p>The Webhook Dispatcher is a microservice that receives GitHub webhooks and processes them for operator pipelines.
+It validates webhooks, stores events in a database, and triggers Tekton pipelines for operator pipelines with
+a capacity management system.</p>
+<h2 id="overview">Overview</h2>
+<p>The Webhook Dispatcher serves as the entry point for GitHub events in the operator pipelines.
+When developers submit operators via pull requests, the dispatcher:</p>
+<ol>
+<li><strong>Receives and validates</strong> GitHub webhooks with signature verification</li>
+<li><strong>Stores webhook events</strong> in a PostgreSQL database</li>
+<li><strong>Manages pipeline capacity</strong> to prevent resource exhaustion</li>
+<li><strong>Triggers Tekton pipelines</strong> for operator validation</li>
+</ol>
+<h2 id="architecture">Architecture</h2>
+<pre><code>┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   GitHub        │    │   Webhook        │    │   PostgreSQL    │
+│   Webhooks      │───▶│   Dispatcher     │───▶│   Database      │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+                                │
+                                ▼
+                       ┌──────────────────┐
+                       │   Tekton         │
+                       │   Pipelines      │
+                       └──────────────────┘
+</code></pre>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Secure webhook processing</strong> with HMAC-SHA256 signature verification</li>
+<li><strong>Multi-repository support</strong> with configurable processing rules</li>
+<li><strong>Pipeline capacity management</strong> to prevent resource overload</li>
+<li><strong>Background event processing</strong> for improved performance</li>
+<li><strong>Health monitoring</strong> and status tracking</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Python 3.11+</li>
+<li>PostgreSQL 12+</li>
+<li>Kubernetes/OpenShift cluster access</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<ol>
+<li>Install dependencies:</li>
+</ol>
+<pre><code class="language-bash">pdm install --no-dev
+</code></pre>
+<ol>
+<li>Create database:</li>
+</ol>
+<pre><code class="language-bash">docker compose up -d
+</code></pre>
+<ol>
+<li>Set environment variables:</li>
+</ol>
+<pre><code class="language-bash">export DATABASE_URL=&quot;postgresql://webhook_user:secure_password@localhost:5432/webhook_dispatcher&quot;
+export GITHUB_WEBHOOK_SECRET=&quot;your_github_webhook_secret&quot;
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>Create a <code>dispatcher_config.yaml</code> file:</p>
+<pre><code class="language-yaml">---
+dispatcher:
+  items:
+    - name: &quot;Community Operators&quot;
+      events:
+        - opened
+        - synchronize
+        - ready_for_review
+      full_repository_name: &quot;redhat-openshift-ecosystem/community-operators&quot;
+      capacity:
+        type: ocp_tekton
+        pipeline_name: &quot;operator-hosted-pipeline&quot;
+        max_capacity: 5
+        namespace: &quot;operator-pipeline-prod&quot;
+      # Tekton pipeline listener URL
+      callback_url: &quot;https://tekton-dashboard.example.com/api/v1/trigger&quot;
+
+security:
+  github_webhook_secret: &quot;${GITHUB_WEBHOOK_SECRET}&quot;
+  verify_signatures: true
+  allowed_github_events:
+    - pull_request
+</code></pre>
+<h3 id="configuration-parameters">Configuration Parameters</h3>
+<ul>
+<li><strong>name</strong>: Configuration identifier</li>
+<li><strong>events</strong>: GitHub PR events to process</li>
+<li><strong>full_repository_name</strong>: Repository in <code>owner/repo</code> format</li>
+<li><strong>capacity</strong>: Pipeline capacity settings</li>
+<li><strong>callback_url</strong>: Tekton pipeline trigger URL</li>
+<li><strong>github_webhook_secret</strong>: Webhook signature verification secret</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<h3 id="running-the-service">Running the Service</h3>
+<p>Production mode:</p>
+<pre><code class="language-bash">export CONFIG_FILE=&quot;/path/to/dispatcher_config.yaml&quot;
+python -m operatorcert.webhook_dispatcher.main
+</code></pre>
+<h3 id="github-webhook-setup">GitHub Webhook Setup</h3>
+<ol>
+<li>Go to repository <strong>Settings</strong> → <strong>Webhooks</strong></li>
+<li>Add webhook with:</li>
+<li><strong>URL</strong>: <code>https://your-domain.com/api/v1/webhooks/github-pipeline</code></li>
+<li><strong>Content type</strong>: <code>application/json</code></li>
+<li><strong>Secret</strong>: Your webhook secret</li>
+<li><strong>Events</strong>: Pull requests</li>
+</ol>
+<h2 id="api-endpoints">API Endpoints</h2>
+<ul>
+<li><code>POST /api/v1/webhooks/github-pipeline</code> - Receive GitHub webhooks</li>
+<li><code>GET /api/v1/status/ping</code> - Health check</li>
+<li><code>GET /api/v1/status/db</code> - Database health</li>
+<li><code>GET /api/v1/events/status</code> - Event status with pagination</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li><strong>HMAC-SHA256 signature verification</strong> for all webhook requests</li>
+<li><strong>GitHub User-Agent validation</strong> to prevent spoofing</li>
+<li><strong>Event type filtering</strong> based on configuration</li>
+<li><strong>TLS encryption</strong> required for production deployments</li>
+</ul>
+<h2 id="monitoring">Monitoring</h2>
+<h3 id="health-checks">Health Checks</h3>
+<pre><code class="language-bash">curl http://localhost:5000/api/v1/status/ping
+curl http://localhost:5000/api/v1/status/db
+</code></pre>
+<h3 id="event-status">Event Status</h3>
+<pre><code class="language-bash">curl &quot;http://localhost:5000/api/v1/events/status?page_size=20&quot;
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<p><strong>Signature verification failures</strong>:
+- Verify <code>GITHUB_WEBHOOK_SECRET</code> matches GitHub configuration
+- Ensure webhook uses <code>application/json</code> content type</p>
+<p><strong>Database connection errors</strong>:
+- Check <code>DATABASE_URL</code> format
+- Verify PostgreSQL is running and accessible</p>
+<p><strong>Event processing delays</strong>:
+- Check dispatcher thread logs
+- Monitor pipeline capacity usage
+- Review database performance</p>
+<h3 id="debug-mode">Debug Mode</h3>
+<pre><code class="language-bash">export LOG_LEVEL=DEBUG
+python -m operatorcert.webhook_dispatcher.main --verbose
+</code></pre>
+<p>For support, refer to the <a href="https://github.com/redhat-openshift-ecosystem/operator-pipelines">operator-pipelines repository</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -982,10 +1150,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate"], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "toc.integrate"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
